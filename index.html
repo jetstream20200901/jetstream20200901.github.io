@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JETSTREAM合同会社｜社員0人、AIで回す会社の道具店</title>
+<meta name="description" content="人間は社長1人、部署はすべてAI（Claude Code）。自分たちが毎日使うやり方を、小さな会社がそのまま使える道具にして届けています。">
+<link rel="icon" href="icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0e2236;--ink:#13283d;--sub:#4a6680;--line:#dbe8f0;--ice:#f5fafd;--sky:#5bb8e8;--sky2:#d9effa;--orange:#ff7a1a;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.85;word-break:keep-all;line-break:strict;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.16em;color:var(--orange);font-weight:700}
+h2{font-size:clamp(30px,4.2vw,50px);line-height:1.22;font-weight:900;margin:10px 0 18px;text-wrap:balance}
+.lead{color:var(--sub);font-size:clamp(16px,1.5vw,18px);max-width:38em}
+.o{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;padding:16px 26px;border-radius:999px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--orange);color:#fff;box-shadow:0 12px 30px rgba(255,122,26,.35)}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;gap:10px;align-items:center;font-weight:900;text-decoration:none;letter-spacing:.02em}
+.logo img{width:32px;height:32px;border-radius:8px}
+.links a{margin-left:24px;font-size:14px;color:var(--sub);text-decoration:none}
+.links a.btn{color:#fff;margin-left:24px;padding:10px 18px}
+
+/* hero */
+.hero{background:linear-gradient(160deg,#eaf6fd 0%,#fff 55%);padding:64px 0 40px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;font-size:13px;color:var(--sub)}
+.badge b{background:var(--navy);color:#fff;border-radius:999px;padding:2px 10px;font-size:12px}
+h1{font-size:clamp(42px,6.4vw,80px);line-height:1.12;font-weight:900;margin:20px 0 22px}
+.hero .lead{margin-bottom:30px}
+.heroimg{position:relative}
+.heroimg img{border-radius:28px;box-shadow:0 40px 80px rgba(14,34,54,.18)}
+.float{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 16px 40px rgba(14,34,54,.16);font-size:14px;font-weight:700;display:flex;align-items:center;gap:10px}
+.float .ic{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;color:#fff;font-size:15px}
+.f1{left:-24px;bottom:34px}.f2{right:-14px;top:26px}
+.trust{display:flex;flex-wrap:wrap;gap:26px;margin-top:42px;color:var(--sub);font-size:13px}
+.trust b{display:block;font-size:28px;color:var(--ink);font-weight:900;line-height:1.2}
+
+/* pain */
+.pain{padding:100px 0;background:var(--ice)}
+.pain .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.pain img{border-radius:24px;box-shadow:0 30px 60px rgba(14,34,54,.12)}
+.plist{list-style:none;padding:0;margin:24px 0 0}
+.plist li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-weight:700}
+.plist li span{color:var(--orange);font-family:"JetBrains Mono";font-weight:700;flex-shrink:0;width:2em}
+
+/* solution / devices */
+.sol{padding:110px 0}
+.sol .head{text-align:center;max-width:760px;margin:0 auto 56px}
+.sol .head .lead{margin:0 auto}
+.stage{position:relative;max-width:980px;margin:0 auto}
+.laptop{background:#1b2a39;border-radius:22px 22px 8px 8px;padding:18px 18px 22px;box-shadow:0 50px 90px rgba(14,34,54,.22)}
+.laptop img{border-radius:8px}
+.base{height:16px;background:linear-gradient(#cfd9e1,#aab7c2);border-radius:0 0 22px 22px;margin:0 -40px}
+.phone{position:absolute;right:-20px;bottom:-40px;width:23%;background:#0b1622;border-radius:30px;padding:10px;box-shadow:0 30px 70px rgba(14,34,54,.3)}
+.phone img{border-radius:22px}
+.caption{position:absolute;left:-10px;top:-22px;background:var(--navy);color:#fff;border-radius:14px;padding:10px 16px;font-family:"JetBrains Mono";font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:100px}
+.step{background:var(--ice);border-radius:22px;padding:28px}
+.step .n{font-family:"JetBrains Mono";color:var(--orange);font-weight:700}
+.step h3{margin:6px 0 6px;font-size:20px}
+.step p{margin:0;color:var(--sub);font-size:15px}
+.cmd{display:inline-block;background:var(--navy);color:#fff;border-radius:8px;padding:0 10px;font-family:"JetBrains Mono";font-size:14px}
+
+/* products */
+.prod{padding:110px 0;background:linear-gradient(180deg,#fff,#eef7fc)}
+.pgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:22px;margin-top:40px}
+.card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 26px 50px rgba(14,34,54,.12)}
+.card .im{aspect-ratio:16/11;overflow:hidden;background:#eef5f9}
+.card .im img{width:100%;height:100%;object-fit:cover;object-position:top}
+.card .tx{padding:22px 24px 26px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .k{font-size:12px;letter-spacing:.14em;color:var(--sub);font-family:"JetBrains Mono"}
+.card h3{margin:0;font-size:20px;line-height:1.45}
+.card p{margin:0;color:var(--sub);font-size:14.5px;flex:1}
+.card .pr{font-weight:900;font-size:24px;margin-top:8px}
+.card .pr small{font-size:13px;color:var(--sub);font-weight:500;margin-left:6px}
+.card.hero-card{grid-row:span 2}
+.card.hero-card .im{aspect-ratio:16/10}
+.card .im.fit img{object-fit:contain;background:#0e2236}
+.card.free .pr{color:var(--orange)}
+
+/* company story */
+.story{background:var(--navy);color:#e3f2fb;padding:110px 0}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.story .lead{color:#9cc0d6}
+.term{background:#081726;border-radius:20px;overflow:hidden;border:1px solid rgba(155,200,230,.15)}
+.term .bar{display:flex;gap:7px;padding:14px 16px;background:#0d2133}
+.term .bar i{width:11px;height:11px;border-radius:50%}
+.term ul{list-style:none;margin:0;padding:12px 20px 18px;font-size:14px}
+.term li{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(155,200,230,.16)}
+.term .t{color:#6f99b5}
+.org{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.org span{border:1px solid rgba(155,200,230,.3);border-radius:999px;padding:6px 14px;font-size:13px}
+.org span.h{background:#fff;color:var(--navy);font-weight:900;border-color:#fff}
+.org span.c{background:var(--orange);border-color:var(--orange);color:#fff;font-weight:700}
+
+/* cta */
+.cta{padding:110px 0;text-align:center;background:radial-gradient(60% 80% at 50% 0%,#e3f3fc,#fff)}
+.cta h2{margin-bottom:14px}
+.cta .lead{margin:0 auto 32px}
+
+/* company table */
+.co{padding:70px 0 90px;border-top:1px solid var(--line)}
+.co .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+dl{margin:0;display:grid;grid-template-columns:130px 1fr;row-gap:14px;column-gap:20px;font-size:15px}
+dt{color:var(--sub)} dd{margin:0}
+.sns a{display:inline-block;margin:0 8px 8px 0;padding:9px 18px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-size:14px}
+footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px}
+
+@media (max-width:900px){
+  .hero .wrap,.pain .wrap,.story .wrap,.co .wrap{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr}
+  .card.hero-card{grid-row:auto}
+  .steps{grid-template-columns:1fr;margin-top:80px}
+  .links a:not(.btn){display:none}
+  .float{font-size:12px;padding:8px 12px}.float .ic{width:22px;height:22px;font-size:12px}.f1{left:8px;bottom:-18px}.f2{right:8px;top:-18px}
+  .lead{word-break:normal}
+  .hero .btn{margin:0 8px 10px 0}
+  .phone{width:30%;right:0;bottom:-30px}
+  .base{margin:0 -12px}
+  .pain,.sol,.prod,.story,.cta{padding:76px 0}
+  dl{grid-template-columns:96px 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#"><img src="icon.webp" alt="">JETSTREAM</a>
+  <div class="links"><a href="#how">しくみ</a><a href="#products">商品</a><a href="#story">この会社</a><a class="btn main" href="https://jetstream-tools.booth.pm/items/9029932">無料ガイド</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="badge"><b>実録</b>社員0人。部署はすべてAI。</span>
+    <h1>会社の事務は<br><span class="o">AIに任せる</span><br>時代へ。</h1>
+    <p class="lead">書類の仕分け、入金と期限の管理、請求書、議事録、週報。小さな会社の「毎日の事務」を、Claude Code にひと言で頼める形にしました。私たち自身が、社員0人でこの会社を回しているやり方です。</p>
+    <a class="btn main" href="https://jetstream-tools.booth.pm/items/9029932">無料の設定ガイドを受け取る →</a>
+    <a class="btn ghost" href="#products" style="margin-left:8px">商品を見る</a>
+    <div class="trust">
+      <div><b>約40秒</b>書類5枚の仕分け（実測）</div>
+      <div><b>16本</b>そのまま使えるスキル</div>
+      <div><b>30分</b>自分の書類で最初の結果</div>
+    </div>
+  </div>
+  <div class="heroimg">
+    <img src="hero.webp" alt="社長1人とAIのアシスタントたちが働く小さなオフィスのイラスト">
+    <div class="float f2"><span class="ic" style="background:var(--sky)">✓</span>5枚の仕分けが完了</div>
+    <div class="float f1"><span class="ic" style="background:var(--orange)">!</span>入金期限まであと7日</div>
+  </div>
+</div></header>
+
+<section class="pain"><div class="wrap">
+  <img src="pain.webp" alt="書類の山と期限に追われる小さな会社のイラスト">
+  <div>
+    <span class="tag mono">PROBLEM</span>
+    <h2>こんなこと、<br>ありませんか？</h2>
+    <ul class="plist">
+      <li><span>01</span>スキャンした書類が「無題.pdf」のまま、どこに何があるか分からない</li>
+      <li><span>02</span>請求書は出したら出しっぱなし。入金期限を過ぎて気づく</li>
+      <li><span>03</span>請求書・議事録・週報づくりで、夜まで事務が終わらない</li>
+      <li><span>04</span>AIを入れたいけれど、何から始めればいいか分からない</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="sol" id="how"><div class="wrap">
+  <div class="head">
+    <span class="tag mono">SOLUTION</span>
+    <h2>頼むのは、<span class="o">ひと言</span>だけ。</h2>
+    <p class="lead">Claude Code に「受付箱を仕分けて」と送ると、書類を読み、名前・置き場所・台帳までそろえ、会社の状況を1枚の画面にまとめます。下の画面は、見本の会社で実際に動かした本物です。</p>
+  </div>
+  <div class="stage">
+    <div class="caption">&gt; 会社の状況を見せて</div>
+    <div class="laptop"><img src="dash.webp" alt="AIが作った会社の画面：売上・入金待ち・期限・やること"></div>
+    <div class="base"></div>
+    <div class="phone"><img src="reel.webp" alt="書類の仕分け結果"></div>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="n">01</span><h3>書類を入れる</h3><p>請求書・領収書・見積書を「受付箱」フォルダへ。</p></div>
+    <div class="step"><span class="n">02</span><h3>ひと言で頼む</h3><p><span class="cmd">受付箱を仕分けて</span><br>名前を変える前に表を見せて、OKを待ちます。</p></div>
+    <div class="step"><span class="n">03</span><h3>画面で見る</h3><p>売上・入金待ち・期限切れが1枚に。毎朝の期限チェックも自動で。</p></div>
+  </div>
+</div></section>
+
+<section class="prod" id="products"><div class="wrap">
+  <span class="tag mono">PRODUCTS</span>
+  <h2>この会社の道具を、<br>そのまま使えます。</h2>
+  <div class="pgrid">
+    <a class="card hero-card" href="https://jetstream-tools.booth.pm/items/9029446">
+      <div class="im"><img src="p_kit.webp" alt="小さな会社のClaude Code導入キット"></div>
+      <div class="tx"><span class="k">KIT ／ いちばん人気にしたい</span><h3>小さな会社の Claude Code 導入キット</h3><p>書類の仕分け・入金と期限・会社の画面・請求書・議事録・週報・月末の締め。スキル16本と見本の会社のデータ入り。はじめの30分で、自分の書類で最初の結果が出ます。</p><ul style="margin:6px 0 0;padding-left:1.2em;color:var(--sub);font-size:14.5px;line-height:1.9"><li>書類を1か所に：受付・書類さがし・期限</li><li>会社を1画面に：売上・入金待ち・やること</li><li>ひと言で：請求書・議事録・週報・月末の締め</li><li>準備の診断・はじめの30分の手順つき</li></ul><span class="pr">9,800円<small>BOOTH・アップデート無料</small></span></div>
+    </a>
+    <a class="card free" href="https://jetstream-tools.booth.pm/items/9029932">
+      <div class="im"><img src="p_guide.webp" alt="無料のClaude Code設定ガイド"></div>
+      <div class="tx"><span class="k">FREE</span><h3>Claude Code 設定ガイド</h3><p>コピーして貼るだけで、ソフトの導入から会社のルールまで。</p><span class="pr">0円<small>BOOTH</small></span></div>
+    </a>
+    <a class="card" href="https://note.com/ai_shigoto_dougu/n/nca6e825f0e7b">
+      <div class="im fit"><img src="p_note.webp" alt="社員0人の会社をClaude Codeで回す（実録）"></div>
+      <div class="tx"><span class="k">NOTE</span><h3>社員0人の会社を Claude Code で回す（実録）</h3><p>引き継ぎメモのひな形、朝の自動作業の指示文、失敗と直したルール。</p><span class="pr">1,980円<small>note</small></span></div>
+    </a>
+    <a class="card" href="https://jetstream-tools.booth.pm/items/9029601">
+      <div class="im"><img src="p_nenga.webp" alt="年賀状・喪中はがき 住所録＆管理シート"></div>
+      <div class="tx"><span class="k">SHEET</span><h3>年賀状・喪中はがき 住所録＆管理シート</h3><p>出した・届いた・返事がまだ、がすぐわかる。</p><span class="pr">680円<small>BOOTH</small></span></div>
+    </a>
+    <a class="card" href="https://note.com/ai_shigoto_dougu/n/nd253edff5bb1">
+      <div class="im"><img src="demo.webp" alt="無料講座 第5回の画面"></div>
+      <div class="tx"><span class="k">FREE COURSE</span><h3>無料の Claude Code 導入講座</h3><p>アプリの本物の画面で、最初の仕事を任せるまで。</p><span class="pr">0円<small>note・X・Instagram</small></span></div>
+    </a>
+  </div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div>
+    <span class="tag mono">OUR STORY</span>
+    <h2>この会社は、<br>売っている道具で<br>動いています。</h2>
+    <p class="lead">人間は社長が1人。企画・商品開発・販売・SNS・経理・品質管理は、すべてAI（Claude Code）の部署です。社長が押すのは「公開してよいか」のボタンだけ。失敗も、売上がまだ0円なことも、正直に記録して公開しています。</p>
+    <div class="org"><span class="h">社長（人間）</span><span class="c">AI社長室</span><span>経営企画</span><span>商品開発</span><span>販売宣伝</span><span>SNS</span><span>経理</span><span>品質管理</span><span>秘書室</span></div>
+  </div>
+  <div class="term mono" aria-label="業務日誌">
+    <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
+    <ul>
+      <li><span class="t">10-24</span><span>品質管理：買う人の目線で検証し、キットの不具合を見つけて修正</span></li>
+      <li><span class="t">10-24</span><span>SNS：無料講座 第5回を、アプリの本物の画面で録画して公開</span></li>
+      <li><span class="t">10-24</span><span>販売宣伝：noteで実録の有料記事と無料記事を公開</span></li>
+      <li><span class="t">10-24</span><span>SNS：同業の広告と比べ、負けた点を直してリールを作り直し</span></li>
+      <li><span class="t">10-23</span><span>販売宣伝：BOOTHのお店を開店</span></li>
+      <li><span class="t">10-23</span><span>社長室：戦略会議で3本柱を提案し、社長が承認</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>まずは、<span class="o">無料</span>で始める。</h2>
+  <p class="lead">コピーして貼るだけで、30分で「AIに仕事を頼める状態」になる設定ガイドです。</p>
+  <a class="btn main" href="https://jetstream-tools.booth.pm/items/9029932">無料の設定ガイドを受け取る →</a>
+</div></section>
+
+<section class="co"><div class="wrap">
+  <div><span class="tag mono">COMPANY</span><h2 style="font-size:32px">会社概要</h2>
+    <div class="sns"><a href="https://note.com/ai_shigoto_dougu">note</a><a href="https://x.com/jetstream_tools">X</a><a href="https://www.instagram.com/jetstream_tools/">Instagram</a><a href="https://jetstream-tools.booth.pm/">BOOTH</a></div>
+  </div>
+  <dl>
+    <dt>会社名</dt><dd>JETSTREAM合同会社</dd>
+    <dt>法人番号</dt><dd>2010003045411</dd>
+    <dt>所在地</dt><dd>東京都中央区銀座1-22-11 銀座大竹ビジデンス2F</dd>
+    <dt>事業</dt><dd>AI（Claude Code）の導入キット・業務の雛形・講座の制作と販売</dd>
+    <dt>店名</dt><dd>JETSTREAM AI仕事の道具店</dd>
+    <dt>お問い合わせ</dt><dd>BOOTHのショップページ「ショップへのお問い合わせ」から</dd>
+  </dl>
+</div></section>
+
+<footer><div class="wrap">
+  イラストは Canva の画像生成で作成しています。Claude・Claude Code は Anthropic 社の製品で、当社は Anthropic 社と提携・公認の関係にはありません。特定商取引法に基づく表記は各販売ページ（BOOTH・note）に記載しています。このページも当社のAI（Claude Code）が作りました。<br>© JETSTREAM合同会社
+</div></footer>
+</body>
+</html>
