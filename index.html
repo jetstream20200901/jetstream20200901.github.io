@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JETSTREAM合同会社｜社員0人、AIで回す会社の道具店</title>
-<meta name="description" content="人間は社長1人、部署はすべてAI（Claude Code）。自分たちが毎日使うやり方を、小さな会社がそのまま使える道具にして届けています。">
+<title>JETSTREAM合同会社｜YouTube「AIが教えるAI学校」運営・AIデジタルコンテンツの制作と販売</title>
+<meta name="description" content="JETSTREAM合同会社は、YouTubeチャンネル「AIが教えるAI学校」の運営と、AIのデジタルコンテンツ（導入キット・ガイド・講座・業務の雛形）の制作・販売を行っています。">
 <link rel="icon" href="icon.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +49,33 @@ h1{font-size:clamp(42px,6.4vw,80px);line-height:1.12;font-weight:900;margin:20px
 .f1{left:-24px;bottom:34px}.f2{right:-14px;top:26px}
 .trust{display:flex;flex-wrap:wrap;gap:26px;margin-top:42px;color:var(--sub);font-size:13px}
 .trust b{display:block;font-size:28px;color:var(--ink);font-weight:900;line-height:1.2}
+
+/* business */
+.biz{padding:100px 0;background:var(--ice)}
+.biz .head{max-width:760px;margin-bottom:40px}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.bcard img{aspect-ratio:3/1;object-fit:cover;width:100%}
+.bcard .tx{padding:26px 28px 30px}
+.bcard .n{font-family:"JetBrains Mono";color:var(--orange);font-weight:700;font-size:13px;letter-spacing:.12em}
+.bcard h3{margin:6px 0 10px;font-size:24px;line-height:1.4}
+.bcard p{margin:0 0 14px;color:var(--sub);font-size:15px}
+.bcard ul{margin:0 0 18px;padding-left:1.2em;color:var(--sub);font-size:14.5px}
+
+/* youtube */
+.yt{padding:110px 0}
+.yt .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+.yt .ch{display:flex;gap:14px;align-items:center;margin:4px 0 18px}
+.yt .ch img{width:56px;height:56px;border-radius:50%}
+.yt .ch b{display:block;font-size:20px}
+.yt .ch span{color:var(--sub);font-size:13px}
+.ytv{display:block;text-decoration:none;border-radius:20px;overflow:hidden;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.ytv:hover{transform:translateY(-4px);box-shadow:0 26px 50px rgba(14,34,54,.12)}
+.ytv .tx{padding:16px 20px 20px}
+.ytv .k{font-size:12px;letter-spacing:.14em;color:var(--sub);font-family:"JetBrains Mono"}
+.ytv h3{margin:4px 0 0;font-size:18px;line-height:1.5}
+.yts{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;margin-top:20px}
+.yts img{border-radius:14px}
 
 /* pain */
 .pain{padding:100px 0;background:var(--ice)}
@@ -123,7 +150,8 @@ dt{color:var(--sub)} dd{margin:0}
 footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px}
 
 @media (max-width:900px){
-  .hero .wrap,.pain .wrap,.story .wrap,.co .wrap{grid-template-columns:1fr}
+  .hero .wrap,.pain .wrap,.story .wrap,.co .wrap,.yt .wrap,.bgrid{grid-template-columns:1fr}
+  .biz,.yt{padding:76px 0}
   .pgrid{grid-template-columns:1fr}
   .card.hero-card{grid-row:auto}
   .steps{grid-template-columns:1fr;margin-top:80px}
@@ -142,47 +170,71 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
 
 <nav><div class="wrap">
   <a class="logo" href="#"><img src="icon.webp" alt="">JETSTREAM</a>
-  <div class="links"><a href="#how">しくみ</a><a href="#products">商品</a><a href="#video">動画</a><a href="#story">この会社</a><a class="btn main" href="https://jetstream-tools.booth.pm/items/9029932">無料ガイド</a></div>
+  <div class="links"><a href="#business">事業内容</a><a href="#video">YouTube</a><a href="#products">商品</a><a href="#story">この会社</a><a href="#company">会社概要</a><a class="btn main" href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">YouTubeを見る</a></div>
 </div></nav>
 
 <header class="hero"><div class="wrap">
   <div>
-    <span class="badge"><b>実録</b>社員0人。部署はすべてAI。</span>
-    <h1>会社の事務は<br><span class="o">AIに任せる</span><br>時代へ。</h1>
-    <p class="lead">書類の仕分け、入金と期限の管理、請求書、議事録、週報。小さな会社の「毎日の事務」を、Claude Code にひと言で頼める形にしました。私たち自身が、社員0人でこの会社を回しているやり方です。</p>
-    <a class="btn main" href="https://jetstream-tools.booth.pm/items/9029932">無料の設定ガイドを受け取る →</a>
+    <span class="badge"><b>運営会社</b>JETSTREAM合同会社</span>
+    <h1>AIを、<br><span class="o">やさしく</span><br>届ける会社。</h1>
+    <p class="lead">JETSTREAM合同会社は、YouTubeチャンネル「AIが教えるAI学校」を運営し、AIのデジタルコンテンツ（導入キット・ガイド・講座・業務の雛形）を制作・販売しています。AIを「知る」から「仕事で使う」まで、ひとつながりで届けます。</p>
+    <a class="btn main" href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">YouTubeで見る →</a>
     <a class="btn ghost" href="#products" style="margin-left:8px">商品を見る</a>
     <div class="trust">
-      <div><b>約40秒</b>書類5枚の仕分け（実測）</div>
-      <div><b>16本</b>そのまま使えるスキル</div>
-      <div><b>30分</b>自分の書類で最初の結果</div>
+      <div><b>毎週</b>YouTubeで配信</div>
+      <div><b>0円</b>から使える導入キット</div>
+      <div><b>2つ</b>の事業：学ぶ・使う</div>
     </div>
   </div>
   <div class="heroimg">
-    <img src="hero.webp" alt="社長1人とAIのアシスタントたちが働く小さなオフィスのイラスト">
-    <div class="float f2"><span class="ic" style="background:var(--sky)">✓</span>5枚の仕分けが完了</div>
-    <div class="float f1"><span class="ic" style="background:var(--orange)">!</span>入金期限まであと7日</div>
+    <img src="yt_ep1.webp" alt="YouTube「AIが教えるAI学校」第1回 AIってなに？のサムネイル">
+    <div class="float f2"><span class="ic" style="background:#e60012">▶</span>第1回「AIってなに？」公開中</div>
+    <div class="float f1"><span class="ic" style="background:var(--orange)">★</span>AI本社キットは無料</div>
   </div>
 </div></header>
 
-<section class="pain"><div class="wrap">
-  <img src="pain.webp" alt="書類の山と期限に追われる小さな会社のイラスト">
+<section class="biz" id="business"><div class="wrap">
+  <div class="head">
+    <span class="tag mono">BUSINESS</span>
+    <h2>事業内容</h2>
+    <p class="lead">「AIってなに？」から「明日の事務をAIに任せる」まで。動画で学び、道具で使う。2つの事業を運営しています。</p>
+  </div>
+  <div class="bgrid">
+    <div class="bcard">
+      <img src="yt_banner.webp" alt="YouTube「AIが教えるAI学校」のバナー">
+      <div class="tx"><span class="n">01 ／ MEDIA</span><h3>YouTube「AIが教えるAI学校」の運営</h3><p>柴犬のシバ先生たちの会話で、AIの基本と仕事での使い方をアニメでやさしく解説するチャンネルです。企画・台本・制作・配信まで自社で行っています。</p><ul><li>超入門：AIってなに？など、基本のキ</li><li>AIニュース：新しいAIが仕事にどう関係あるか</li><li>AI仕事術：メール・議事録・Excelなど、すぐ使える活かし方</li></ul><a class="btn ghost" href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">チャンネルを見る →</a></div>
+    </div>
+    <div class="bcard">
+      <img src="dash.webp" alt="AI本社キットで作った会社の画面" style="object-position:top">
+      <div class="tx"><span class="n">02 ／ DIGITAL CONTENTS</span><h3>AIデジタルコンテンツの制作・販売</h3><p>小さな会社がAI（Claude Code）を仕事で使うための、導入キット・設定ガイド・講座・業務の雛形を制作し、BOOTH・note・GitHubで販売・配布しています。</p><ul><li>AI本社（Claude Code 導入キット）：無料</li><li>設定ガイド・無料講座</li><li>実録記事・Excel/スプレッドシートの雛形</li></ul><a class="btn ghost" href="#products">商品を見る →</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="yt" id="video"><div class="wrap">
   <div>
-    <span class="tag mono">PROBLEM</span>
-    <h2>こんなこと、<br>ありませんか？</h2>
-    <ul class="plist">
-      <li><span>01</span>スキャンした書類が「無題.pdf」のまま、どこに何があるか分からない</li>
-      <li><span>02</span>請求書は出したら出しっぱなし。入金期限を過ぎて気づく</li>
-      <li><span>03</span>請求書・議事録・週報づくりで、夜まで事務が終わらない</li>
-      <li><span>04</span>AIを入れたいけれど、何から始めればいいか分からない</li>
-    </ul>
+    <span class="tag mono">YOUTUBE</span>
+    <h2>AIが教える<span class="o">AI学校</span></h2>
+    <div class="ch"><img src="yt_icon.webp" alt=""><div><b>AIが教えるAI学校</b><span>@ai_ga_oshieru_ai_gakkou ／ 運営：JETSTREAM合同会社</span></div></div>
+    <a class="ytv" href="https://youtu.be/M9DnT1ICP-k">
+      <img src="yt_ep1.webp" alt="第1回 AIってなに？ 10分でスッキリわかる">
+      <div class="tx"><span class="k">第1回 ／ 約10分</span><h3>【超入門】AIってなに？ 10分でスッキリわかる｜ChatGPT・Claudeのしくみと仕事での使い方</h3></div>
+    </a>
+  </div>
+  <div>
+    <p class="lead">AIをまだ使っていない方、少し触ったけれどよくわからない方へ。シバ先生・ミサキさん・社長・ロボットのジェットの会話で、むずかしい言葉を使わずに説明します。</p>
+    <a class="yts" href="https://youtube.com/shorts/XEUULtAMXw8" style="text-decoration:none">
+      <img src="yt_short.webp" alt="ショート ChatGPTの正体、実は…これだけ!?">
+      <div><span class="tag mono">SHORTS</span><h3 style="margin:4px 0 0;font-size:18px;line-height:1.5">ChatGPTの正体、実は「次の言葉を当ててるだけ」!?</h3></div>
+    </a>
+    <p style="margin-top:26px"><a class="btn main" href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">チャンネル登録する →</a></p>
   </div>
 </div></section>
 
 <section class="sol" id="how"><div class="wrap">
   <div class="head">
-    <span class="tag mono">SOLUTION</span>
-    <h2>頼むのは、<span class="o">ひと言</span>だけ。</h2>
+    <span class="tag mono">PRODUCT</span>
+    <h2>主力商品：頼むのは、<span class="o">ひと言</span>だけ。</h2>
     <p class="lead">Claude Code に「受付箱を仕分けて」と送ると、書類を読み、名前・置き場所・台帳までそろえ、会社の状況を1枚の画面にまとめます。下の画面は、見本の会社で実際に動かした本物です。</p>
   </div>
   <div class="stage">
@@ -200,7 +252,8 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
 
 <section class="prod" id="products"><div class="wrap">
   <span class="tag mono">PRODUCTS</span>
-  <h2>この会社の道具を、<br>そのまま使えます。</h2>
+  <h2>AIのデジタルコンテンツ</h2>
+  <p class="lead">BOOTH・note・GitHubで販売・配布しています。いちばん大きな導入キットは無料です。</p>
   <div class="pgrid">
     <a class="card hero-card" href="https://jetstream-tools.booth.pm/items/9029446">
       <div class="im"><img src="p_kit.webp" alt="小さな会社のClaude Code導入キット"></div>
@@ -209,10 +262,6 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
     <a class="card free" href="https://jetstream-tools.booth.pm/items/9029932">
       <div class="im"><img src="p_guide.webp" alt="無料のClaude Code設定ガイド"></div>
       <div class="tx"><span class="k">FREE</span><h3>Claude Code 設定ガイド</h3><p>コピーして貼るだけで、ソフトの導入から会社のルールまで。</p><span class="pr">0円<small>BOOTH</small></span></div>
-    </a>
-    <a class="card" href="https://youtu.be/M9DnT1ICP-k" id="video">
-      <div class="im"><img src="yt_ep1.webp" alt="YouTube「AIが教えるAI学校」第1回 AIってなに？"></div>
-      <div class="tx"><span class="k">YOUTUBE ／ 無料で見る</span><h3>AIが教えるAI学校</h3><p>シバ先生がAIの基本と仕事での使い方を、会話でやさしく説明。第1回「AIってなに？ 10分でスッキリわかる」。</p><span class="pr">0円<small>YouTube</small></span></div>
     </a>
     <a class="card" href="https://note.com/ai_shigoto_dougu/n/nca6e825f0e7b">
       <div class="im fit"><img src="p_note.webp" alt="社員0人の会社をClaude Codeで回す（実録）"></div>
@@ -232,13 +281,14 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
 <section class="story" id="story"><div class="wrap">
   <div>
     <span class="tag mono">OUR STORY</span>
-    <h2>この会社は、<br>売っている道具で<br>動いています。</h2>
-    <p class="lead">人間は社長が1人。企画・商品開発・販売・SNS・経理・品質管理は、すべてAI（Claude Code）の部署です。社長が押すのは「公開してよいか」のボタンだけ。失敗も、売上がまだ0円なことも、正直に記録して公開しています。</p>
-    <div class="org"><span class="h">社長（人間）</span><span class="c">AI社長室</span><span>経営企画</span><span>商品開発</span><span>販売宣伝</span><span>SNS</span><span>経理</span><span>品質管理</span><span>秘書室</span></div>
+    <h2>動画も道具も、<br>AIの部署が<br>つくっています。</h2>
+    <p class="lead">人間は社長が1人。YouTubeの企画・台本・制作、商品開発、販売、SNS、経理、品質管理は、すべてAI（Claude Code）の部署です。社長が押すのは「公開してよいか」のボタンだけ。失敗も、売上がまだ0円なことも、正直に記録して公開しています。</p>
+    <div class="org"><span class="h">社長（人間）</span><span class="c">AI社長室</span><span>YouTube制作</span><span>経営企画</span><span>商品開発</span><span>販売宣伝</span><span>SNS</span><span>経理</span><span>品質管理</span><span>秘書室</span></div>
   </div>
   <div class="term mono" aria-label="業務日誌">
     <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
     <ul>
+      <li><span class="t">10-30</span><span>YouTube：第1回「AIってなに？」とショートを公開。X・Instagram・noteの名前をチャンネルにそろえた</span></li>
       <li><span class="t">10-30</span><span>SNS：YouTubeを「AIが教えるAI学校」に改名し、第1回「AIってなに？」を制作</span></li>
       <li><span class="t">10-25</span><span>社長室：AI本社（導入キット）を無料にし、BOOTHとGitHubで公開</span></li>
       <li><span class="t">10-25</span><span>SNS：YouTube「ラクするAI仕事術」を開設</span></li>
@@ -254,11 +304,12 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
 
 <section class="cta"><div class="wrap">
   <h2>まずは、<span class="o">無料</span>で始める。</h2>
-  <p class="lead">コピーして貼るだけで、30分で「AIに仕事を頼める状態」になる設定ガイドです。</p>
-  <a class="btn main" href="https://jetstream-tools.booth.pm/items/9029932">無料の設定ガイドを受け取る →</a>
+  <p class="lead">動画でAIを知って、無料の設定ガイドで30分後には「AIに仕事を頼める状態」に。</p>
+  <a class="btn main" href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">YouTubeで見る →</a>
+  <a class="btn ghost" href="https://jetstream-tools.booth.pm/items/9029932" style="margin-left:8px">無料の設定ガイド</a>
 </div></section>
 
-<section class="co"><div class="wrap">
+<section class="co" id="company"><div class="wrap">
   <div><span class="tag mono">COMPANY</span><h2 style="font-size:32px">会社概要</h2>
     <div class="sns"><a href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">YouTube</a><a href="https://note.com/ai_shigoto_dougu">note</a><a href="https://x.com/jetstream_tools">X</a><a href="https://www.instagram.com/jetstream_tools/">Instagram</a><a href="https://jetstream-tools.booth.pm/">BOOTH</a></div>
   </div>
@@ -266,8 +317,8 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
     <dt>会社名</dt><dd>JETSTREAM合同会社</dd>
     <dt>法人番号</dt><dd>2010003045411</dd>
     <dt>所在地</dt><dd>東京都中央区銀座1-22-11 銀座大竹ビジデンス2F</dd>
-    <dt>事業</dt><dd>AI（Claude Code）の導入キット・業務の雛形・講座の制作と販売</dd>
-    <dt>店名</dt><dd>JETSTREAM AI仕事の道具店</dd>
+    <dt>事業</dt><dd>YouTubeチャンネルの運営<br>AIのデジタルコンテンツ（導入キット・ガイド・講座・業務の雛形）の制作・販売</dd>
+    <dt>運営</dt><dd>YouTube「AIが教えるAI学校」<br>JETSTREAM AI仕事の道具店（BOOTH・note）</dd>
     <dt>お問い合わせ</dt><dd>BOOTHのショップページ「ショップへのお問い合わせ」から</dd>
   </dl>
 </div></section>
