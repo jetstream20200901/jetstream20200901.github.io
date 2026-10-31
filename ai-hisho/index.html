@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI秘書キット（無料）｜Claude Codeに貼るだけのプロンプト集｜AIが教えるAI学校</title>
+<meta name="description" content="YouTube「AIが教えるAI学校」の動画「Claude CodeでAI秘書を作ってみた」で使ったプロンプト5本を無料でお配りしています。秘書を作る・毎朝の報告・メールの下書き・書類の仕分け・引き継ぎメモ。">
+<link rel="icon" href="../icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0e2236;--ink:#13283d;--sub:#4a6680;--line:#dbe8f0;--ice:#f5fafd;--orange:#ff7a1a;--red:#e60012}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.85;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.tag{display:inline-block;font-size:12px;letter-spacing:.16em;color:var(--orange);font-weight:700}
+h1{font-size:clamp(34px,5.6vw,60px);line-height:1.18;font-weight:900;margin:14px 0 18px}
+h2{font-size:clamp(26px,3.6vw,38px);line-height:1.3;font-weight:900;margin:8px 0 18px}
+.o{color:var(--orange)}
+.lead{color:var(--sub);font-size:clamp(16px,1.6vw,18px)}
+nav{border-bottom:1px solid var(--line);background:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;gap:10px;align-items:center;font-weight:900;text-decoration:none}
+.logo img{width:30px;height:30px;border-radius:8px}
+.hero{background:linear-gradient(160deg,#fff4e8 0%,#fff 60%);padding:56px 0 50px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.free{display:inline-flex;gap:8px;align-items:center;background:var(--red);color:#fff;font-weight:900;border-radius:999px;padding:4px 16px;font-size:14px}
+.shiba{border-radius:50%;box-shadow:0 30px 60px rgba(14,34,54,.18);max-width:300px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;padding:16px 28px;border-radius:999px;background:var(--orange);color:#fff;box-shadow:0 12px 30px rgba(255,122,26,.35);border:0;font-size:17px;cursor:pointer;font-family:inherit}
+.sec{padding:70px 0}
+.alt{background:var(--ice)}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:20px}
+.item{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+.item .n{font-family:"JetBrains Mono";color:var(--orange);font-weight:700}
+.item h3{margin:4px 0 6px;font-size:18px}
+.item p{margin:0;color:var(--sub);font-size:14.5px}
+.need li{margin:6px 0}
+.rule{background:var(--navy);color:#fff;border-radius:20px;padding:24px 28px;margin-top:24px}
+.rule b{color:#ffd23f}
+.form{background:#fff;border:2px solid var(--orange);border-radius:24px;padding:30px;max-width:620px;margin:0 auto;box-shadow:0 20px 50px rgba(255,122,26,.12)}
+.form h2{text-align:center}
+.form p.small{font-size:13px;color:var(--sub)}
+.kf label{display:block;font-weight:700;margin:14px 0 6px}
+.kf input[type=email]{width:100%;font:inherit;font-size:17px;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px}
+.kf input[type=email]:focus{outline:none;border-color:var(--orange)}
+.kf .agree{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:14px;color:var(--sub);margin:16px 0 18px;line-height:1.7}
+.kf .agree input{margin-top:5px;width:18px;height:18px;flex:none}
+.kmsg{min-height:1.5em;text-align:center;font-weight:700;color:var(--orange);margin:10px 0 0}
+.faq dt{font-weight:900;margin-top:18px}
+.faq dd{margin:4px 0 0;color:var(--sub)}
+footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px}
+@media (max-width:800px){.hero .wrap{grid-template-columns:1fr}.shiba{max-width:200px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="../"><img src="../icon.webp" alt="">JETSTREAM</a>
+  <a href="#get" style="font-size:14px;font-weight:700;color:var(--orange);text-decoration:none">無料で受け取る</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="free">無料</span> <span class="mono" style="font-size:13px;color:var(--sub);margin-left:6px">YouTube「AIが教えるAI学校」連動</span>
+    <h1>貼るだけで作れる<br><span class="o">AI秘書キット</span></h1>
+    <p class="lead">動画「Claude CodeでAI秘書を作ってみた」で使ったプロンプト5本を、そのままお配りします。コピーして Claude Code に貼るだけで、朝の報告・メールの下書き・書類の整理をまかせる「AI秘書」が作れます。</p>
+    <a class="btn" href="#get">無料で受け取る →</a>
+  </div>
+  <img class="shiba" src="yt_icon.webp" alt="シバ先生">
+</div></header>
+
+<section class="sec"><div class="wrap">
+  <span class="tag mono">CONTENTS</span>
+  <h2>入っているプロンプト（5本）</h2>
+  <div class="list">
+    <div class="item"><span class="n">01</span><h3>秘書を作る</h3><p>AIが5つ質問。答えるだけで、秘書の手帳（ルール）と仕事用のフォルダができます。</p></div>
+    <div class="item"><span class="n">02</span><h3>毎朝の報告</h3><p>今日の予定・やること・7日以内の期限・確認してほしいことを1枚に。</p></div>
+    <div class="item"><span class="n">03</span><h3>メールの下書き</h3><p>言いにくい返事も、ていねいに短く。確かめる所に【要確認】。送るのは人。</p></div>
+    <div class="item"><span class="n">04</span><h3>書類の仕分け</h3><p>スキャンした書類を読み、名前とフォルダの案を表で見せて、OKを待ちます。</p></div>
+    <div class="item"><span class="n">05</span><h3>引き継ぎメモ</h3><p>1日の終わりに記録。次の日は、メモを読んでから仕事を始めます。</p></div>
+  </div>
+  <div class="rule">安心の決まりを、最初から入れてあります：<b>メールを送る・ファイルを消す・お金を払う</b>は、AIが自分でせず、必ず止まって聞きます。<b>パスワード・カード番号・マイナンバー</b>は、聞かない・書かない・保存しません。</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <span class="tag mono">REQUIREMENTS</span>
+  <h2>使うのに必要なもの</h2>
+  <ul class="need lead">
+    <li>Claude のデスクトップアプリ（Windows・Mac）</li>
+    <li>Claude の有料プラン（いちばん安い Pro プランは月20ドル・2026年10月時点。料金は公式サイトでご確認ください）</li>
+    <li>秘書専用のフォルダを1つ（例：デスクトップに「秘書室」）</li>
+  </ul>
+  <p class="lead">アプリと有料プランは、ご自分でご用意ください。このキットは、プロンプト（AIへの頼み方の文章）だけをお配りするものです。</p>
+</div></section>
+
+<section class="sec" id="get"><div class="wrap">
+  <div class="form">
+    <span class="tag mono" style="display:block;text-align:center">FREE DOWNLOAD</span>
+    <h2>メールアドレスを入れて、<br>無料で受け取る</h2>
+    <p style="text-align:center;color:var(--sub)">登録すると、その場でダウンロードのページが開きます。</p>
+    <form id="kitForm" class="kf" method="POST" action="https://86d2b70b.sibforms.com/serve/MUIFAEQiFQ6CvQvcyMw9REjs8EMm1aQzNaxrN9OlJf6Q4MVF9XA2_MeDArSxiW8petblBoCgm7VxAa8FMeryVaXBInMfAIzCE6vmnfCRniS3ELkxAcLQgsF9ZFyyYGsRBVZujW7hWWfOspNHnoqkmOY8ZapQRQFxXOVVXA1duhcrDGQORbQ12AapJ7wjXH1sxTtwEJNeAOMh7UCd1w==">
+      <label for="EMAIL">メールアドレス</label>
+      <input type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="例：taro@example.com" required>
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <input type="hidden" name="locale" value="ja">
+      <input type="hidden" name="html_type" value="simple">
+      <label class="agree"><input type="checkbox" id="agree" required> <span>お知らせメール（新しい動画・無料の道具など、ときどき）の受け取りと、<a href="../privacy.html" target="_blank">個人情報の取り扱い</a>に同意します。配信はいつでも停止できます。</span></label>
+      <button class="btn" type="submit" id="kitBtn" style="width:100%;justify-content:center">無料で受け取る →</button>
+      <p class="kmsg" id="kitMsg" role="status"></p>
+    </form>
+    <p class="small">登録すると、すぐにダウンロードのページが開きます（メールは届きません）。ページはブックマークしておくと便利です。</p>
+  </div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <span class="tag mono">FAQ</span>
+  <h2>よくある質問</h2>
+  <dl class="faq">
+    <dt>本当に無料ですか？</dt><dd>はい。プロンプト集は無料です。Claude のアプリと有料プランの料金は、Anthropic 社にお支払いいただくものです。</dd>
+    <dt>パソコンにくわしくなくても使えますか？</dt><dd>コピーして貼るのが基本です。AIからの質問に答えながら進みます。くわしい手順は動画でご覧いただけます。</dd>
+    <dt>会社で共有してもいいですか？</dt><dd>社内での共有は自由です。再配布・販売はご遠慮ください。</dd>
+    <dt>ChatGPT でも使えますか？</dt><dd>このキットは、パソコンのファイルを扱える Claude Code 用です。ChatGPT では、ファイルの仕分けなどはできません。</dd>
+  </dl>
+  <p style="margin-top:30px"><a href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">▶ YouTube「AIが教えるAI学校」で動画を見る</a></p>
+</div></section>
+
+<footer><div class="wrap">
+  Claude・Claude Code は Anthropic 社の製品です。当社は Anthropic 社と提携・公認の関係にはありません。AIの出力は必ず人が確かめてからお使いください。<br>
+  運営：JETSTREAM合同会社（東京都中央区銀座1-22-11 銀座大竹ビジデンス2F）｜<a href="../privacy.html">個人情報の取り扱い</a>｜<a href="../">ホームページ</a><br>© JETSTREAM合同会社
+</div></footer>
+<script>
+(function(){
+  var f=document.getElementById('kitForm'), b=document.getElementById('kitBtn'), m=document.getElementById('kitMsg');
+  var NEXT='kit-r7m2q.html';
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.reportValidity()) return;
+    b.disabled=true; m.textContent='登録しています…';
+    fetch(f.action,{method:'POST',mode:'no-cors',body:new FormData(f)})
+      .then(function(){ m.textContent='登録しました。ダウンロードのページを開きます…'; location.href=NEXT; })
+      .catch(function(){ b.disabled=false; m.textContent='登録できませんでした。時間をおいて、もう一度お試しください。'; });
+  });
+})();
+</script>
+</body>
+</html>

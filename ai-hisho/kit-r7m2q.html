@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI秘書キット ダウンロード｜AIが教えるAI学校</title>
+<meta name="description" content="YouTube「AIが教えるAI学校」の動画「Claude CodeでAI秘書を作ってみた」で使ったプロンプト5本を無料でお配りしています。秘書を作る・毎朝の報告・メールの下書き・書類の仕分け・引き継ぎメモ。">
+<link rel="icon" href="../icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0e2236;--ink:#13283d;--sub:#4a6680;--line:#dbe8f0;--ice:#f5fafd;--orange:#ff7a1a}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.85;overflow-wrap:anywhere}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+.top{background:linear-gradient(160deg,#fff4e8,#fff 60%);padding:40px 0 24px}
+h1{font-size:clamp(28px,4.6vw,44px);line-height:1.25;margin:8px 0 12px}
+.dl{display:inline-block;margin:6px 8px 6px 0;padding:12px 20px;border-radius:999px;background:var(--orange);color:#fff;font-weight:700;text-decoration:none}
+.dl.g{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.blk{padding:26px 0;border-bottom:1px solid var(--line)}
+.blk h2{font-size:22px;margin:0 0 10px}
+.pr{position:relative;margin:14px 0}
+pre{background:var(--navy);color:#e8f3fb;border-radius:14px;padding:46px 18px 18px;white-space:pre-wrap;font-family:"JetBrains Mono",monospace;font-size:14px;line-height:1.7;margin:0}
+.cp{position:absolute;top:10px;right:10px;background:var(--orange);color:#fff;border:0;border-radius:999px;padding:6px 16px;font-weight:700;cursor:pointer;font-family:inherit}
+.note{background:var(--ice);border-left:4px solid var(--orange);padding:10px 14px;border-radius:8px}
+footer{background:var(--ice);color:var(--sub);font-size:12px;padding:24px 0 34px;margin-top:30px}
+</style></head><body><header class="top"><div class="wrap"><a href="../" style="font-weight:900;text-decoration:none;color:inherit">JETSTREAM</a><h1>AI秘書キット<br>ご登録ありがとうございます</h1><p>下の「コピー」ボタンを押して、Claude Code に貼ってください。ファイルで保存したい方は、こちらからどうぞ。</p><a class="dl" href="ai-hisho-kit.md" download>ファイルで保存（.md）</a><a class="dl g" href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">▶ 動画で使い方を見る</a></div></header><main class="wrap"><section class="blk"><h2>はじめに：必要なもの</h2><ul><li><b>Claude のデスクトップアプリ</b>（パソコンに入れます。Windows・Mac）</li><li><b>Claude の有料プラン</b>（いちばん安い Pro プランは月20ドル。2026年10月時点。料金は公式サイトで確認してください）</li><li><b>秘書専用のフォルダ</b>（例：デスクトップに「秘書室」というフォルダを1つ作る）</li></ul><p>Claude のアプリで「Code」を開き、作業するフォルダに <b>秘書室</b> を選んでから、下のプロンプトを順に貼ってください。</p><p class="note">会社の大事なフォルダ全部を、いきなり渡さないでください。まずは「秘書室」の中だけで働いてもらいます。</p></section><section class="blk"><h2>① 秘書を作る（最初の1回だけ）</h2><p>秘書があなたに5つ質問します。答えるだけで、秘書の手帳（ルール）と、仕事用のフォルダができます。</p><div class="pr"><button class="cp" data-i="1">コピー</button><pre id="p1">あなたは、私の会社の「AI秘書」になります。今いるフォルダを「秘書室」として使います。
+次の順番で準備してください。
+
+1. 私に質問を5つ、1つずつしてください。私が答えてから次の質問へ進んでください。
+   (1) 会社名と、どんな仕事をしている会社か
+   (2) よくやりとりする取引先・お客さん（会社名だけ。個人の連絡先は不要）
+   (3) 文章の話し方の好み（例：ていねいに・短く・やわらかく）
+   (4) 毎日・毎週・毎月ある仕事
+   (5) 秘書にまかせたいこと と、まかせたくないこと
+
+2. 答えをもとに、このフォルダに「CLAUDE.md」（秘書の手帳）を作ってください。
+   次のルールは、私の答えに関係なく、必ず手帳に入れてください。
+   - メールやメッセージを送る、ファイルを消す、お金を払う・申し込む は、絶対に自分でしない。必ず止まって私に聞く
+   - パスワード・カード番号・口座番号・マイナンバーは、聞かない・書かない・保存しない
+   - 「秘書室」フォルダの外のファイルは、読んだり変えたりしない
+   - ファイルの名前を変える・移動する前は、必ず表で見せて、私の「OK」を待つ
+   - わからないことは推測で決めず、私に聞く
+   - 日付・金額・名前など、まちがえると困る所には【要確認】をつける
+   - 仕事を始めるときは、まず「引き継ぎメモ.md」の最新の内容を読む
+
+3. 次のフォルダとファイルを作ってください。
+   - 受付箱（スキャンした書類などを入れる所）
+   - 書類（仕分けた書類を置く所）
+   - 下書き（メールなどの下書きを置く所）
+   - 予定とやること（予定表・やること・毎朝の報告を置く所。中に「予定とやること.md」を作り、書き方の見本を1行入れる）
+   - 引き継ぎメモ.md
+
+4. 最後に、作ったものを一覧で見せて、手帳（CLAUDE.md）の中身を短くまとめて教えてください。</pre></div></section><section class="blk"><h2>② 毎朝の報告</h2><div class="pr"><button class="cp" data-i="2">コピー</button><pre id="p2">「引き継ぎメモ.md」と「予定とやること」フォルダの中を読んで、今日の報告を作ってください。
+
+形：
+① 今日の予定（時刻の早い順）
+② 今日やること（大事な順に3つまで）
+③ 期限が7日以内のもの（【期限】をつけて、あと何日かも書く）
+④ 私に確認してほしいこと
+
+最後に、この報告を「予定とやること/報告_今日の日付.md」に保存してください。</pre></div><p><b>毎朝自動にしたいとき</b>（アプリに予約の機能がある場合）</p><div class="pr"><button class="cp" data-i="3">コピー</button><pre id="p3">上の「毎朝の報告」を、平日の朝8時に自動で作るように予約してください。
+予約の内容を見せて、私のOKを待ってから設定してください。</pre></div><p class="note">自動の報告は、パソコンがついていて、アプリが開いている時に動きます。</p></section><section class="blk"><h2>③ メールの下書き</h2><div class="pr"><button class="cp" data-i="4">コピー</button><pre id="p4">次のメールへの返事の下書きを作ってください。
+
+【もらったメール】
+（ここに、もらったメールを貼る）
+
+【伝えたいこと】
+（例：値上げはお受けできない。ただ、今後もお付き合いを続けたい）
+
+条件：
+- 手帳（CLAUDE.md）の話し方で、ていねいに、短く
+- 日付・金額・名前で、私が確かめるべき所に【要確認】をつける
+- 「下書き」フォルダに保存する
+- メールは絶対に送らない</pre></div><p class="note">送るのは、あなたです。読んで直してから、いつものメールソフトで送ってください。</p></section><section class="blk"><h2>④ 書類の仕分け</h2><p>先に、スキャンした書類（PDFや写真）を「受付箱」フォルダに入れておきます。</p><div class="pr"><button class="cp" data-i="5">コピー</button><pre id="p5">「受付箱」の書類を読んで、仕分けてください。
+
+1. 書類ごとに、日付・取引先・種類（請求書／領収書／見積書／契約書／その他）・金額 を読み取る
+2. 新しい名前「日付_取引先_種類」（例：2026-10-31_さくら工務店_請求書.pdf。拡張子は元のまま）と、
+   置き場所（「書類/種類」のフォルダ）を、表にして見せる
+3. 私が「OK」と言うまで、名前の変更や移動はしない
+4. OKのあと実行し、「書類/台帳.csv」に1件1行で書き足す（日付,取引先,種類,金額,ファイル名）
+5. 読めない書類は「受付箱」に残し、理由を教える。どんな書類も消さない</pre></div></section><section class="blk"><h2>⑤ 引き継ぎメモ（1日の終わりに）</h2><p>AIは、新しく話を始めると、前の会話を覚えていないことがあります。1日の終わりに、メモに残してもらいます。</p><div class="pr"><button class="cp" data-i="6">コピー</button><pre id="p6">今日の仕事を「引き継ぎメモ.md」に書き足してください。
+
+形：
+- 日付
+- やったこと
+- まだ終わっていないこと
+- 次にやること
+- 手帳（CLAUDE.md）に足したほうがよさそうなルール（あれば）
+
+手帳を書き換えるときは、先に案を見せて、私のOKを待ってください。</pre></div></section><section class="blk"><h2>気をつけること（3つだけ）</h2><ul><li><b>パスワードやカード番号は、AIに教えない。</b> 手帳にも書きません</li><li><b>送る・消す・払うは、人が押す。</b> AIは下書きと準備まで</li><li><b>小さく始めて、結果を確かめる。</b> いきなり全部をまかせない。AIは「それっぽいウソ」を書くことがあるので、日付・金額は必ず人の目で</li></ul></section><section class="blk"><h2>もっと使いたい方へ</h2><ul><li>無料の導入キット「AI本社」：書類の仕分け・入金と期限・会社の画面・請求書・議事録・週報など（<a href="https://jetstream-tools.booth.pm/items/9029446">BOOTH</a>）</li><li><a href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">YouTube「AIが教えるAI学校」</a></li><li><a href="../">ホームページ</a></li></ul></section></main><footer><div class="wrap">社内での共有は自由です。再配布・販売はご遠慮ください。Claude・Claude Code は Anthropic 社の製品で、当社は Anthropic 社と提携・公認の関係にはありません。AIの出力は必ず人が確かめてからお使いください。<br>運営：JETSTREAM合同会社｜<a href="../privacy.html">個人情報の取り扱い</a></div></footer><script>document.querySelectorAll('.cp').forEach(b=>b.onclick=async()=>{const t=document.getElementById('p'+b.dataset.i).innerText;try{await navigator.clipboard.writeText(t)}catch(e){const r=document.createRange();r.selectNode(document.getElementById('p'+b.dataset.i));getSelection().removeAllRanges();getSelection().addRange(r);document.execCommand('copy')}b.textContent='コピーしました';setTimeout(()=>b.textContent='コピー',1800)})</script></body></html>
