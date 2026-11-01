@@ -46,7 +46,7 @@ h1{font-size:clamp(42px,6.4vw,80px);line-height:1.12;font-weight:900;margin:20px
 .heroimg img{border-radius:28px;box-shadow:0 40px 80px rgba(14,34,54,.18)}
 .float{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 16px 40px rgba(14,34,54,.16);font-size:14px;font-weight:700;display:flex;align-items:center;gap:10px}
 .float .ic{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;color:#fff;font-size:15px}
-.f1{left:-24px;bottom:34px}.f2{right:-14px;top:26px}
+.f1{right:24px;bottom:-24px}.f2{right:-14px;top:-24px}
 .trust{display:flex;flex-wrap:wrap;gap:26px;margin-top:42px;color:var(--sub);font-size:13px}
 .trust b{display:block;font-size:28px;color:var(--ink);font-weight:900;line-height:1.2}
 
@@ -64,7 +64,11 @@ h1{font-size:clamp(42px,6.4vw,80px);line-height:1.12;font-weight:900;margin:20px
 
 /* youtube */
 .yt{padding:110px 0}
-.yt .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+.yt .head{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin-bottom:30px}
+.yt .head .lead{margin:0}
+.yt .sub{font-size:13px;letter-spacing:.14em;color:var(--sub);font-family:"JetBrains Mono";margin:44px 0 14px}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .yt .ch{display:flex;gap:14px;align-items:center;margin:4px 0 18px}
 .yt .ch img{width:56px;height:56px;border-radius:50%}
 .yt .ch b{display:block;font-size:20px}
@@ -74,8 +78,9 @@ h1{font-size:clamp(42px,6.4vw,80px);line-height:1.12;font-weight:900;margin:20px
 .ytv .tx{padding:16px 20px 20px}
 .ytv .k{font-size:12px;letter-spacing:.14em;color:var(--sub);font-family:"JetBrains Mono"}
 .ytv h3{margin:4px 0 0;font-size:18px;line-height:1.5}
-.yts{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;margin-top:20px}
+.yts{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;text-decoration:none;color:inherit}
 .yts img{border-radius:14px}
+.yts h3{margin:4px 0 0;font-size:17px;line-height:1.5}
 
 /* pain */
 .pain{padding:100px 0;background:var(--ice)}
@@ -105,7 +110,7 @@ h1{font-size:clamp(42px,6.4vw,80px);line-height:1.12;font-weight:900;margin:20px
 
 /* products */
 .prod{padding:110px 0;background:linear-gradient(180deg,#fff,#eef7fc)}
-.pgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:22px;margin-top:40px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
 .card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 .card:hover{transform:translateY(-4px);box-shadow:0 26px 50px rgba(14,34,54,.12)}
 .card .im{aspect-ratio:16/11;overflow:hidden;background:#eef5f9}
@@ -116,8 +121,6 @@ h1{font-size:clamp(42px,6.4vw,80px);line-height:1.12;font-weight:900;margin:20px
 .card p{margin:0;color:var(--sub);font-size:14.5px;flex:1}
 .card .pr{font-weight:900;font-size:24px;margin-top:8px}
 .card .pr small{font-size:13px;color:var(--sub);font-weight:500;margin-left:6px}
-.card.hero-card{grid-row:span 2}
-.card.hero-card .im{aspect-ratio:16/10}
 .card .im.fit img{object-fit:contain;background:#0e2236}
 .card.free .pr{color:var(--orange)}
 
@@ -150,13 +153,13 @@ dt{color:var(--sub)} dd{margin:0}
 footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px}
 
 @media (max-width:900px){
-  .hero .wrap,.pain .wrap,.story .wrap,.co .wrap,.yt .wrap,.bgrid{grid-template-columns:1fr}
+  .hero .wrap,.pain .wrap,.story .wrap,.co .wrap,.yt .head,.vgrid,.sgrid,.bgrid{grid-template-columns:1fr}
   .biz,.yt{padding:76px 0}
   .pgrid{grid-template-columns:1fr}
   .card.hero-card{grid-row:auto}
   .steps{grid-template-columns:1fr;margin-top:80px}
   .links a:not(.btn){display:none}
-  .float{font-size:12px;padding:8px 12px}.float .ic{width:22px;height:22px;font-size:12px}.f1{left:8px;bottom:-18px}.f2{right:8px;top:-18px}
+  .float{font-size:12px;padding:8px 12px}.float .ic{width:22px;height:22px;font-size:12px}.f1{right:8px;bottom:-18px}.f2{right:8px;top:-18px}
   .lead{word-break:normal}
   .hero .btn{margin:0 8px 10px 0}
   .phone{width:30%;right:0;bottom:-30px}
@@ -187,8 +190,8 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
     </div>
   </div>
   <div class="heroimg">
-    <img src="yt_ep1.webp" alt="YouTube「AIが教えるAI学校」第1回 AIってなに？のサムネイル">
-    <div class="float f2"><span class="ic" style="background:#e60012">▶</span>第1回「AIってなに？」公開中</div>
+    <img src="yt_ep2.webp" alt="YouTube「AIが教えるAI学校」Claude CodeでAI秘書を作ってみた のサムネイル">
+    <div class="float f2"><span class="ic" style="background:#e60012">▶</span>新着「AI秘書を作ってみた」公開中</div>
     <div class="float f1"><span class="ic" style="background:var(--orange)">★</span>AI本社キットは無料</div>
   </div>
 </div></header>
@@ -212,23 +215,37 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
 </div></section>
 
 <section class="yt" id="video"><div class="wrap">
-  <div>
-    <span class="tag mono">YOUTUBE</span>
-    <h2>AIが教える<span class="o">AI学校</span></h2>
-    <div class="ch"><img src="yt_icon.webp" alt=""><div><b>AIが教えるAI学校</b><span>@ai_ga_oshieru_ai_gakkou ／ 運営：JETSTREAM合同会社</span></div></div>
-    <a class="ytv" href="https://youtu.be/M9DnT1ICP-k">
-      <img src="yt_ep1.webp" alt="第1回 AIってなに？ 10分でスッキリわかる">
-      <div class="tx"><span class="k">第1回 ／ 約10分</span><h3>【超入門】AIってなに？ 10分でスッキリわかる｜ChatGPT・Claudeのしくみと仕事での使い方</h3></div>
-    </a>
-  </div>
-  <div>
+  <div class="head">
+    <div>
+      <span class="tag mono">YOUTUBE</span>
+      <h2>AIが教える<span class="o">AI学校</span></h2>
+      <div class="ch"><img src="yt_icon.webp" alt=""><div><b>AIが教えるAI学校</b><span>@ai_ga_oshieru_ai_gakkou ／ 運営：JETSTREAM合同会社</span></div></div>
+    </div>
     <p class="lead">AIをまだ使っていない方、少し触ったけれどよくわからない方へ。シバ先生・ミサキさん・社長・ロボットのジェットの会話で、むずかしい言葉を使わずに説明します。</p>
-    <a class="yts" href="https://youtube.com/shorts/XEUULtAMXw8" style="text-decoration:none">
-      <img src="yt_short.webp" alt="ショート ChatGPTの正体、実は…これだけ!?">
-      <div><span class="tag mono">SHORTS</span><h3 style="margin:4px 0 0;font-size:18px;line-height:1.5">ChatGPTの正体、実は「次の言葉を当ててるだけ」!?</h3></div>
-    </a>
-    <p style="margin-top:26px"><a class="btn main" href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">チャンネル登録する →</a></p>
   </div>
+  <div class="sub">VIDEOS ／ 新しい順</div>
+  <div class="vgrid">
+    <a class="ytv" href="https://youtu.be/gVxLwHO8Mo4">
+      <img src="yt_ep2.webp" alt="AI仕事術 Claude CodeでAI秘書を作ってみた">
+      <div class="tx"><span class="k">AI仕事術 ／ 約14分</span><h3>Claude CodeでAI秘書を作ってみた｜朝の報告・メール下書き・書類整理（プロンプト無料配布）</h3></div>
+    </a>
+    <a class="ytv" href="https://youtu.be/M9DnT1ICP-k">
+      <img src="yt_ep1.webp" alt="超入門 AIってなに？ 10分でスッキリわかる">
+      <div class="tx"><span class="k">超入門 ／ 約10分</span><h3>AIってなに？ 10分でスッキリわかる｜ChatGPT・Claudeのしくみと仕事での使い方</h3></div>
+    </a>
+  </div>
+  <div class="sub">SHORTS</div>
+  <div class="sgrid">
+    <a class="yts" href="https://youtube.com/shorts/mGyAoXGx0Tc">
+      <img src="yt_short2.webp" alt="ショート AIが秘書になった！">
+      <div><span class="tag mono">SHORTS</span><h3>AIが秘書になった！ Claude Codeで作ってみた</h3></div>
+    </a>
+    <a class="yts" href="https://youtube.com/shorts/XEUULtAMXw8">
+      <img src="yt_short.webp" alt="ショート ChatGPTの正体、実は…これだけ!?">
+      <div><span class="tag mono">SHORTS</span><h3>ChatGPTの正体、実は「次の言葉を当ててるだけ」!?</h3></div>
+    </a>
+  </div>
+  <p style="margin-top:34px;text-align:center"><a class="btn main" href="https://www.youtube.com/@ai_ga_oshieru_ai_gakkou">チャンネル登録する →</a> <a class="btn ghost" href="https://jetstream20200901.github.io/ai-hisho/">AI秘書のプロンプト（無料）→</a></p>
 </div></section>
 
 <section class="sol" id="how"><div class="wrap">
@@ -292,6 +309,7 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
   <div class="term mono" aria-label="業務日誌">
     <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
     <ul>
+      <li><span class="t">11-01</span><span>YouTube：AI仕事術「Claude CodeでAI秘書を作ってみた」とショートを公開。使ったプロンプト5本を無料で配布</span></li>
       <li><span class="t">10-30</span><span>YouTube：第1回「AIってなに？」とショートを公開。X・Instagram・noteの名前をチャンネルにそろえた</span></li>
       <li><span class="t">10-30</span><span>SNS：YouTubeを「AIが教えるAI学校」に改名し、第1回「AIってなに？」を制作</span></li>
       <li><span class="t">10-25</span><span>社長室：AI本社（導入キット）を無料にし、BOOTHとGitHubで公開</span></li>
@@ -300,7 +318,6 @@ footer{background:var(--ice);color:var(--sub);font-size:12px;padding:26px 0 36px
       <li><span class="t">10-24</span><span>SNS：無料講座 第5回を、アプリの本物の画面で録画して公開</span></li>
       <li><span class="t">10-24</span><span>販売宣伝：noteで実録の有料記事と無料記事を公開</span></li>
       <li><span class="t">10-24</span><span>SNS：同業の広告と比べ、負けた点を直してリールを作り直し</span></li>
-      <li><span class="t">10-23</span><span>販売宣伝：BOOTHのお店を開店</span></li>
       <li><span class="t">10-23</span><span>社長室：戦略会議で3本柱を提案し、社長が承認</span></li>
     </ul>
   </div>
